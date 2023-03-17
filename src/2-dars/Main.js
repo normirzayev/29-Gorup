@@ -1,9 +1,12 @@
+import { MassivMap } from "./MassivMap";
+import { ObjCount } from "./ObjCount";
+
 function Main() {
   return (
     <>
-      <h1>Main</h1>
+      {/* <ObjCount /> */}
+      <MassivMap />
     </>
   );
 }
-
 export default Main;
