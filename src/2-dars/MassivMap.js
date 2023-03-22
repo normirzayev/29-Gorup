@@ -9,6 +9,7 @@ import rasm5 from "../img/rasm5.jpg";
 import rasm6 from "../img/rasm6.jpg";
 
 import { AiOutlineLike, AiTwotoneLike } from "react-icons/ai";
+import Navbar from "../components/Navbar";
 export const MassivMap = () => {
   const [data, setData] = useState([
     {
@@ -117,11 +118,12 @@ export const MassivMap = () => {
 
   return (
     <div>
+      <Navbar data={data}  />
       <br />
       <h1>
         Total price:
         {data.reduce(
-          (a, b) =>
+          (a, b) => 
             a + (b.price - (b.price / 100) * b.disCount).toFixed(2) * b.count,
           0
         )}
