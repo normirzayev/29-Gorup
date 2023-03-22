@@ -1,5 +1,5 @@
 import { MassivMap } from "./MassivMap";
-import { ObjCount } from "./ObjCount";
+// import { ObjCount } from "./ObjCount";
 
 function Main() {
   return (

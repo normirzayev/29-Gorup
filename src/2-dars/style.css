@@ -11,6 +11,7 @@
   box-shadow: 0 0 15px silver;
   border-radius: 15px;
   overflow: hidden;
+  position: relative;
 }
 
 .card_box figure {
@@ -66,6 +67,28 @@
   background-color: red;
 }
 
+.like_box {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+}
+
+.like_box button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.like_btn {
+  font-size: 35px;
+}
+.disCount{ 
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  background-color: yellow;
+  padding: 5px;
+}
 @media (max-width:1100px) {
   .flex_between {
     flex-direction: column;
