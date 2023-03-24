@@ -7,10 +7,11 @@ import rasm3 from "../img/rasm3.jpg";
 import rasm4 from "../img/rasm4.jpg";
 import rasm5 from "../img/rasm5.jpg";
 import rasm6 from "../img/rasm6.jpg";
-
+import { BsFillCartPlusFill } from "react-icons/bs";
 import { AiOutlineLike, AiTwotoneLike } from "react-icons/ai";
 import Navbar from "../components/Navbar";
 export const MassivMap = () => {
+  const [cart, setCart] = useState([]);
   const [data, setData] = useState([
     {
       id: 1,
@@ -108,6 +109,7 @@ export const MassivMap = () => {
     );
   };
 
+  // mahsulotlarga like bosish function
   let likeFunc = (value) => {
     setData(
       data.map((item) =>
@@ -116,14 +118,23 @@ export const MassivMap = () => {
     );
   };
 
+  // mahsulotlarga cart ga function hosil qilindi
+  let cartAdd = (item) => {
+    if (cart.filter((value) => value.id === item.id).length === 0) {
+      setCart([...cart, { ...item, count: 1 }]);
+    } else {
+      alert("bu karzinkada mavjud");
+    }
+  };
+
   return (
     <div>
-      <Navbar data={data}  />
+      <Navbar data={data} setData={setData} cart={cart} setCart={setCart} />
       <br />
       <h1>
         Total price:
         {data.reduce(
-          (a, b) => 
+          (a, b) =>
             a + (b.price - (b.price / 100) * b.disCount).toFixed(2) * b.count,
           0
         )}
@@ -173,6 +184,23 @@ export const MassivMap = () => {
                   minus
                 </button>
               </div>
+              <button
+                style={{
+                  width: "100%",
+                  margin: "10px 0",
+                  fontSize: "25px",
+                  background: "blue",
+                  color: "white",
+                  borderRadius: "10px",
+                  border: "none",
+                  outline: "none",
+                  padding: "5px",
+                  cursor: "pointer",
+                }}
+                onClick={() => cartAdd(obj)}
+              >
+                <BsFillCartPlusFill />
+              </button>
             </div>
           </div>
         ))}
