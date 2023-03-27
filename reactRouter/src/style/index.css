@@ -1,0 +1,43 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
+  font-family: sans-serif;
+}
+.app{
+  max-width: 1440px;
+  margin: auto;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 150px;
+  align-items: center;
+  box-shadow: 0 0 10px silver;
+  background-color: white;
+}
+.navbar h1 {
+  text-transform: capitalize;
+}
+.navbar ul {
+  display: flex;
+  gap: 20px;
+}
+ul li {
+  text-transform: capitalize;
+}
+
+.link {
+  text-decoration: none;
+  color: red;
+}
+
+.active{
+  background-color: red;
+}
+/* 
+.navbar a {
+  text-decoration: none;
+  color: red;
+} */
