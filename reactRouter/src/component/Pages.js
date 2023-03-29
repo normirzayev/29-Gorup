@@ -7,14 +7,26 @@ import Home from "../pages/Home";
 import MoreInfo from "../pages/MoreInfo";
 import Setting from "../pages/Setting";
 export default function Pages() {
+  let array = [
+    "salom",
+    "hello",
+    "narsa",
+    "computer",
+    55,
+    854,
+    6321,
+    "true",
+    "false",
+  ];
+
   return (
     <div>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/blog" element={<Blog />} />
+        <Route path="/blog" element={<Blog array={array} />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/setting" element={<Setting />} />
-        <Route path="/about" element={<About />} />
+        <Route path="/about/:raqam" element={<About array={array} />} />
         <Route path="/moreInfo" element={<MoreInfo />} />
       </Routes>
     </div>

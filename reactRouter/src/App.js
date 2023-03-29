@@ -5,6 +5,8 @@ import "./style/index.css";
 function App() {
   return (
     <div className="app">
+
+      
       <Navbar />
       <Pages />
       <Footer />

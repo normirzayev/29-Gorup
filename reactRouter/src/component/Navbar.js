@@ -1,5 +1,4 @@
 import { NavLink } from "react-router-dom";
-
 export default function Navbar() {
   return (
     <>
@@ -9,9 +8,9 @@ export default function Navbar() {
           <li>
             <NavLink to={"/"}> home </NavLink>
           </li>
-          <li>
+          {/* <li>
             <NavLink to={"/about"}> about </NavLink>
-          </li>
+          </li> */}
           <li>
             <NavLink to={"/blog"}> blog </NavLink>
           </li>
