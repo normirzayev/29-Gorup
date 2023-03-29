@@ -5,6 +5,7 @@ import Blog from "../pages/Blog";
 import Contact from "../pages/Contact";
 import Home from "../pages/Home";
 import MoreInfo from "../pages/MoreInfo";
+import NotFound from "../pages/NotFound";
 import Setting from "../pages/Setting";
 export default function Pages() {
   let array = [
@@ -28,6 +29,7 @@ export default function Pages() {
         <Route path="/setting" element={<Setting />} />
         <Route path="/about/:raqam" element={<About array={array} />} />
         <Route path="/moreInfo" element={<MoreInfo />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </div>
   );

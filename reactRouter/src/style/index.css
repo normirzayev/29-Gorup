@@ -5,10 +5,12 @@
   list-style: none;
   font-family: sans-serif;
 }
-.app{
+
+.app {
   max-width: 1440px;
   margin: auto;
 }
+
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -17,13 +19,16 @@
   box-shadow: 0 0 10px silver;
   background-color: white;
 }
+
 .navbar h1 {
   text-transform: capitalize;
 }
+
 .navbar ul {
   display: flex;
   gap: 20px;
 }
+
 ul li {
   text-transform: capitalize;
 }
@@ -33,9 +38,21 @@ ul li {
   color: red;
 }
 
-.active{
+.active {
   background-color: red;
 }
+
+.not_found {
+  width: 100%;
+  height: 100%;
+  background-color: silver;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  right: 0;
+  padding: 50px 0;
+}
+
 /* 
 .navbar a {
   text-decoration: none;
