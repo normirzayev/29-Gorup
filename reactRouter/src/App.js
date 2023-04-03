@@ -1,4 +1,6 @@
-import Footer from "./component/Footer";
+// import Footer from "./component/Footer";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import Navbar from "./component/Navbar";
 import Pages from "./component/Pages";
 import "./style/index.css";
@@ -7,9 +9,7 @@ function App() {
     <div className="app">
       <Navbar />
       <Pages />
-      <Footer />
-
-      
+      {/* <Footer /> */}
     </div>
   );
 }

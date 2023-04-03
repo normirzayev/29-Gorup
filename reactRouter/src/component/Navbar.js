@@ -20,6 +20,9 @@ export default function Navbar() {
           <li>
             <NavLink to={"/setting"}> setting </NavLink>
           </li>
+          <li>
+            <NavLink to={"/moreInfo"}> moreInfo </NavLink>
+          </li>
         </ul>
       </div>
     </>

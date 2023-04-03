@@ -8,7 +8,7 @@ export default function About({ array }) {
     <div>
       <br />
       <br />
-      <h1>about</h1>
+      <h1>blog ichki page</h1>
       <h2> {array[link.raqam]} </h2>
       <br />
       <br />

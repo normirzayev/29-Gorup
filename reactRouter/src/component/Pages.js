@@ -19,15 +19,15 @@ export default function Pages() {
     "true",
     "false",
   ];
-
+ 
   return (
     <div>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/blog" element={<Blog array={array} />} />
+        <Route path="/blog/:raqam" element={<About array={array} />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/setting" element={<Setting />} />
-        <Route path="/about/:raqam" element={<About array={array} />} />
         <Route path="/moreInfo" element={<MoreInfo />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
