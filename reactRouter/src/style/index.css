@@ -5,7 +5,13 @@
   list-style: none;
   font-family: sans-serif;
 }
-
+a {
+  text-decoration: none;
+  text-transform: capitalize;
+  padding: 7px 10px;
+  color: black;
+  border-radius: 3px;
+}
 .app {
   max-width: 1440px;
   margin: auto;
@@ -40,6 +46,7 @@ ul li {
 
 .active {
   background-color: red;
+  color: white;
 }
 
 .not_found {
@@ -81,11 +88,53 @@ input, button{
   align-items: center;
 }
 .homeSlider {
-  overflow: hidden;
+  /* overflow: hidden; */
   width: 80%;
   display: grid;
 }
 .homeSlider img {
   width: 100%;
   height: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+.homeSec1{
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+.tabs{
+  display: flex;
+  gap: 25px;
+}
+.infos{
+  width: 100%;
+  padding: 35px;
+  border: 1px solid white;
+  background-color: #ffffff33;
+  backdrop-filter: blur(20px);
+  font-family: 'Courier New', Courier, monospace;
+}
+.tabsInfo{
+  transition: .3s ease;
+  opacity: 0;
+  display: none;
+}
+.tabsInfo.open{
+  opacity: 1;
+  display: block;
+}
+.shopping {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
 }

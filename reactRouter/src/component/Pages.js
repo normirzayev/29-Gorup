@@ -7,6 +7,7 @@ import Home from "../pages/Home";
 import MoreInfo from "../pages/MoreInfo";
 import NotFound from "../pages/NotFound";
 import Setting from "../pages/Setting";
+import ShoppingSite from "../pages/ShoppingSite";
 export default function Pages() {
   let array = [
     "salom",
@@ -29,6 +30,7 @@ export default function Pages() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/setting" element={<Setting />} />
         <Route path="/moreInfo" element={<MoreInfo />} />
+        <Route path="/shopping_site" element={<ShoppingSite />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </div>

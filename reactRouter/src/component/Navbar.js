@@ -8,9 +8,6 @@ export default function Navbar() {
           <li>
             <NavLink to={"/"}> home </NavLink>
           </li>
-          {/* <li>
-            <NavLink to={"/about"}> about </NavLink>
-          </li> */}
           <li>
             <NavLink to={"/blog"}> blog </NavLink>
           </li>
@@ -22,6 +19,9 @@ export default function Navbar() {
           </li>
           <li>
             <NavLink to={"/moreInfo"}> moreInfo </NavLink>
+          </li>
+          <li>
+            <NavLink to={"/shopping_site"}> shopping_site </NavLink>
           </li>
         </ul>
       </div>
