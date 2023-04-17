@@ -1,28 +1,43 @@
 import React from "react";
 import { useContext } from "react";
 import { DataContext } from "../context/Context";
+import { Button } from "@mui/material";
+import { useNavigate } from "react-router-dom";
 export default function Setting() {
-  let { getValueInput, sendData } = useContext(DataContext);
+  let { getValueInput, clearInput, sendLocalData, inputData } =
+    useContext(DataContext);
+
+  let portal = useNavigate();
+  let cencelFunc = () => {
+    clearInput();
+    portal("/moreInfo");
+  };
   return (
     <div>
       <h1>setting</h1>
-
-      <form className="form" onSubmit={sendData}>
+      <form className="form">
         <input
           type="text"
-          placeholder="name"
+          placeholder="nomi"
           onChange={getValueInput}
-          name="name"
+          name="nomi"
+          value={inputData?.nomi}
         />
         <br />
         <input
           type="text"
-          placeholder="password"
+          placeholder="haqida"
           onInput={getValueInput}
-          name="password"
+          name="haqida"
+          value={inputData?.haqida}
         />
         <br />
-        <button> send </button>
+        <Button variant="contained" onClick={sendLocalData}>
+          {inputData.id === "" ? "send" : "edit"}
+        </Button>
+        <Button variant="outlined" onClick={cencelFunc}>
+          cencel
+        </Button>
       </form>
     </div>
   );
