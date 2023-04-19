@@ -1,19 +1,15 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-
 export const DataContext = React.createContext();
-
 export default function ContextProvider({ children }) {
   let link = useNavigate();
   let link1 = useNavigate();
   const [data, setData] = useState(
     JSON.parse(localStorage.getItem("localST")) || []
   );
-
   function localST_ref() {
     setData(JSON.parse(localStorage.getItem("localST")) || []);
   }
-
   let nextPage = useNavigate();
   const [inputData, setInputData] = useState({
     id: "",
@@ -21,7 +17,6 @@ export default function ContextProvider({ children }) {
     haqida: "",
     soni: 0,
   });
-
   let clearInput = () => {
     setInputData({
       id: "",
@@ -30,7 +25,6 @@ export default function ContextProvider({ children }) {
       soni: 0,
     });
   };
-
   let getValueInput = (e) => {
     // console.log(e.target.value);
     setInputData({
@@ -84,6 +78,7 @@ export default function ContextProvider({ children }) {
 
   // mahsulotlarni tahrirlash
   let handleEdit = (item) => {
+    console.log(item);
     setInputData(item);
     link1("/setting");
   };
@@ -125,7 +120,7 @@ export default function ContextProvider({ children }) {
         handleEdit,
         handlePlus,
         handleMinus,
-        clearInput
+        clearInput,
       }}
     >
       {children}

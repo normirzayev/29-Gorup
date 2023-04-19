@@ -8,6 +8,7 @@ import MoreInfo from "../pages/MoreInfo";
 import NotFound from "../pages/NotFound";
 import Setting from "../pages/Setting";
 import ShoppingSite from "../pages/ShoppingSite";
+import Api from "../pages/Api";
 export default function Pages() {
   let array = [
     "salom",
@@ -20,7 +21,7 @@ export default function Pages() {
     "true",
     "false",
   ];
- 
+
   return (
     <div>
       <Routes>
@@ -31,6 +32,7 @@ export default function Pages() {
         <Route path="/setting" element={<Setting />} />
         <Route path="/moreInfo" element={<MoreInfo />} />
         <Route path="/shopping_site" element={<ShoppingSite />} />
+        <Route path="/api" element={<Api />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </div>

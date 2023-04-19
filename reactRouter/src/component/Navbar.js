@@ -23,6 +23,9 @@ export default function Navbar() {
           <li>
             <NavLink to={"/shopping_site"}> shopping_site </NavLink>
           </li>
+          <li>
+            <NavLink to={"/api"}> api data </NavLink>
+          </li>
         </ul>
       </div>
     </>
